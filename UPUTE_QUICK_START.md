@@ -1,6 +1,6 @@
 # React + Vite + Firebase: Brzi vodič
 
-Kratki upute kako pokrenuti React aplikaciju i spojiti je s Firebaseom. Za učenike i početnike.
+Kratki upute kako pokrenuti React aplikaciju i spojiti je s Firebaseom.
 
 ---
 
