@@ -12,7 +12,7 @@ import { SNIPPETS } from "./utility/snippets";
 import { TABS } from "./utility/tabs";
 import { s } from "./utility/styles";
 
-const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "spojen";
+const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "";
 
 export default function App() {
   const [tab, setTab] = useState("pregled");

@@ -16,7 +16,7 @@ npm create vite@latest moj-projekt -- --template react
 
 Unesi naziv projekta kad te pita (npr. `moj-projekt`). Template je `react`.
 
-[SCREENSHOT: Terminal s naredbom i izlazom]
+![Terminal – Vite create](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/terminal-vite-create.png)
 
 ### 1.2 Uđi u projekt i instaliraj ovisnosti
 
@@ -46,7 +46,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 3. Možeš isključiti Google Analytics (nije potreban za početak)
 4. Klikni **Create project**
 
-[SCREENSHOT: Kreiranje novog projekta]
+![Kreiranje novog Firebase projekta](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/creating%20a%20new%20project.png)
 
 ### 2.3 Uključi Authentication
 
@@ -56,7 +56,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
    3.\* Možete također ovdje uključiti "Passwordless sign-in"
 4. Spremi
 
-[SCREENSHOT: Authentication – Email/Password uključen]
+![Authentication – Email/Password uključen](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/authentication-email-password.png)
 
 ### 2.4 Kreiraj Firestore bazu
 
@@ -65,20 +65,20 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 3. Odaberi **Standard Edition**
 4. Odaberi regiju (npr. `eur3`)
 5. Odaberi **Start in test mode** (za učenje; kasnije postavi auth pravila (jako bitno za sigurnost))
-6. Klikni **Enable**
+6. Klikni **Create**
 
-[SCREENSHOT: Firestore – Create database]
+![Firestore – Create database](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firestore-create-database.png)
 
 ### 2.5 Uzmi konfiguraciju
 
-1. Klikni ikonu zupčanika pored **Project Overview** → **Project settings**
+1. Klikni ikonu zupčanika pored **Project Overview** → **General**
 2. Skrolaj do **Your apps**
-3. Klikni ikonu web-a `</>` za "Add app"
-4. Unesi naziv appa (npr. `moj-chat-web`) – registracija nije potrebna
+3. Klikni ikonu web-a `</>` za "Web"
+4. Unesi naziv appa (npr. `moj-chat-web`); registracija nije potrebna
 5. Klikni **Register app**
 6. Kopiraj objekt `firebaseConfig` – trebat će ti u sljedećem koraku
 
-[SCREENSHOT: Firebase config objekt u konzoli]
+![Firebase config objekt u konzoli](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firebase-config.png)
 
 ---
 
@@ -86,7 +86,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 
 ### 3.1 Kreiraj .env datoteku
 
-U rootu projekta (gdje je `package.json`) kreiraj datoteku `.env`.
+U rootu projekta (gdje je `package.json` ili `.env.example`) kreiraj datoteku `.env`.
 
 U nju stavi (vrijednosti zamijeni svojim iz Firebase konzole):
 
@@ -99,7 +99,7 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
 VITE_FIREBASE_APP_ID=1:123456789:web:abc123
 ```
 
-**Važno:** Varijable moraju počinjati s `VITE_` da ih Vite proslijedi u browser.
+**Važno:** Varijable moraju počinjati s `VITE_` da ih Vite učita.
 
 ### 3.2 Kreiraj Firebase config datoteku
 
@@ -132,7 +132,7 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 ```
 
-[SCREENSHOT: Struktura mapi i config.js u editoru]
+![Struktura mapi i config.js u editoru](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/primjer_koda.png)
 
 ---
 
@@ -192,15 +192,13 @@ export default App;
 
 1. `collection(db, 'poruke')` – referenca na kolekciju `poruke`
 2. `addDoc(col, { ... })` – dodaje novi dokument
-3. `serverTimestamp()` – vrijeme s servera (bolje od `new Date()` na klijentu)
+3. `serverTimestamp()` – vrijeme s servera (bolje od `new Date()` na klijentu, sigurnije)
 
 ### 4.3 Provjeri u Firestore konzoli
 
 1. Otvori Firestore Database u Firebase konzoli
 2. Trebala bi se pojaviti kolekcija `poruke` s dokumentima
 3. Svaki dokument ima `tekst` i `vrijeme`
-
-[SCREENSHOT: Firestore konzola s novim dokumentima]
 
 ---
 
@@ -236,3 +234,9 @@ Otvori URL u browseru (npr. `http://localhost:5173`). Ako je sve dobro postavlje
 
 **Varijable iz .env se ne vide**  
 → Mora biti prefiks `VITE_` i restart dev servera nakon promjene `.env`.
+
+## Napomena
+
+Naglasak, nemoj te se iznenaditi kad vidite da Firebase automatski vam nedaje dva korisnika s istim mailom, jer su određene funkcionalnosti ugrađene unutar usluga (kao to za authentikaciju).
+
+Duje Žižić
