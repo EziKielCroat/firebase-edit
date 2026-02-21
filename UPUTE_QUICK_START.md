@@ -14,9 +14,7 @@ Otvori terminal u mapi gdje želiš projekt (npr. Desktop ili Documents).
 npm create vite@latest moj-projekt -- --template react
 ```
 
-Unesi naziv projekta kad te pita (npr. `moj-projekt`). Template je `react`.
-
-![Terminal – Vite create](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/terminal-vite-create.png)
+Unesi naziv projekta kad te pita (npr. `moj-projekt`). Template je `React`.
 
 ### 1.2 Uđi u projekt i instaliraj ovisnosti
 
@@ -46,7 +44,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 3. Možeš isključiti Google Analytics (nije potreban za početak)
 4. Klikni **Create project**
 
-![Kreiranje novog Firebase projekta](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/creating%20a%20new%20project.png)
+![Kreiranje novog Firebase projekta](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/creating_a_new_project.png)
 
 ### 2.3 Uključi Authentication
 
@@ -56,7 +54,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
    3.\* Možete također ovdje uključiti "Passwordless sign-in"
 4. Spremi
 
-![Authentication – Email/Password uključen](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/authentication-email-password.png)
+![Authentication – Email/Password uključen](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/set_up_auth.png)
 
 ### 2.4 Kreiraj Firestore bazu
 
@@ -67,7 +65,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 5. Odaberi **Start in test mode** (za učenje; kasnije postavi auth pravila (jako bitno za sigurnost))
 6. Klikni **Create**
 
-![Firestore – Create database](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firestore-create-database.png)
+![Firestore – Create database](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firebase_setup.png)
 
 ### 2.5 Uzmi konfiguraciju
 
@@ -78,7 +76,7 @@ Idi na [https://console.firebase.google.com](https://console.firebase.google.com
 5. Klikni **Register app**
 6. Kopiraj objekt `firebaseConfig` – trebat će ti u sljedećem koraku
 
-![Firebase config objekt u konzoli](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firebase-config.png)
+![Firebase config objekt u konzoli](https://raw.githubusercontent.com/EziKielCroat/firebase-edit/refs/heads/main/public/firebase_config.png)
 
 ---
 
